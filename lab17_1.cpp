@@ -16,17 +16,16 @@ int main(){
     ifstream file;
     string s,input;
     char format[] ="%[^:]:%d %d %d";
-    vector<int> score;
-    vector<string> v_name,grade;
     vector<int> calgrade;
+    vector<string> v_name,grade;
+    vector<int> score;
     char name[100];
     int a,b,c;
     file.open("name_score.txt");
-    //cout << "Please input your command : ";
-    //cin >> input;
+
     while(getline(file,s)){
         sscanf(s.c_str(),format,name,&a,&b,&c);
-        //cout << a << " "<<b<<" " <<c <<" "<<a+b+c<< "\n";
+     
         v_name.push_back(name);
         calgrade.push_back(a+b+c);
         
@@ -57,7 +56,7 @@ int main(){
                 }
             
             }
-           //cout << "-------------------------------" << endl;
+          
         }else if(input =="GRADE"){
             cout << "-------------------------------\n";
             for(int i=0;i<grade.size();i++){
@@ -72,7 +71,7 @@ int main(){
         }else{
             cout << "Invalid command\n";   
         }
-        //start =1;
+      
     }
     
 
